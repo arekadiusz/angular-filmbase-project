@@ -1,0 +1,14 @@
+<div class="bodyItems">
+    
+    <div class="bodyItem">
+        <ul *ngFor="let item of items" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+            <div class="listItem">
+                <li>{{item.name}}</li>
+            </div>
+        </ul>
+
+    </div>
+</div>
+<div class="selectedItem">
+    <app-items-details [item]="selectedItem"></app-items-details>
+</div>

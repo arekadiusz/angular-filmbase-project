@@ -1,0 +1,22 @@
+<div *ngIf="item">
+    <div class="itemName">
+        <h2>{{item.name | uppercase}}</h2>
+    </div>
+    <div class="itemData">
+        <div id='name'><span>tytuł: </span>{{item.name}}</div>
+        <div id='ingredients'><span>czas trwania: </span>{{item.ingredients}}</div>
+        <div id='description'><span>opis: </span> {{item.description}} </div>
+        <div id='price'><span>ocena: </span> {{item.price}}</div>
+        <button type="button" class="btn btn-primary" (click)="deleteData(item.name)">Usun pozycję</button>
+        <button id="btn1" type="button" class="btn btn-primary" (click)="changeHTML()">Edytuj</button>
+    </div>
+    <div *ngIf="enableEdit">
+        <div class="editData">
+            <div id='name1'><span>tytuł: </span><input #newName type="text" value={{item.name}}></div>
+            <div id='ingredients1'><span>czas trwania: </span><input #newIngr type="text" value={{item.ingredients}}></div>
+            <div id='description1'><span>opis: </span><input #newDesc type="text" value={{item.description}}> </div>
+            <div id='price1'><span>ocena: </span><input #newPrice type="text" value={{item.price}}></div>
+            <button id="save" type="button" class="btn btn-primary" (click)="changeData(item.name,newName.value,newIngr.value,newDesc.value,newPrice.value,item.id)">Zapisz zmiany</button>
+        </div>
+    </div>
+</div>

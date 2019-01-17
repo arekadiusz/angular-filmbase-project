@@ -1,0 +1,35 @@
+.itemName {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    background-color: gray;
+    color: white;
+    padding-left: 10px;
+}
+
+.itemData {
+    font-size: 1.2em;
+    background-color: lightgray;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    padding: 10px;
+}
+
+.editData {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: lightgray;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+}
+
+.editData input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.editData>button {
+    margin-top: 10px;
+}

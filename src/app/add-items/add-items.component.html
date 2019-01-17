@@ -1,0 +1,10 @@
+<div class="addItemName">
+    <h2>Dodaj pozycję</h2>
+</div>
+<div class="addItemBody">
+    <div>tytuł: <input #name type="text" placeholder="tytuł"> </div>
+    <div>czas trwania: <input #ingredients type="text" placeholder="czas trwania"> </div>
+    <div>opis: <input #description type="text" placeholder="opis"> </div>
+    <div>ocena: <input #price type="number" placeholder="ocena"> </div>
+    <button type="button" class="btn btn-primary" (click)="postData(name.value, ingredients.value, description.value, price.value)">Dodaj pozycję</button>
+</div>
